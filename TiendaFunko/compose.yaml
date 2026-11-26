@@ -1,0 +1,7 @@
+﻿services:
+  tiendafunko:
+    image: tiendafunko
+    build:
+      context: .
+      dockerfile: TiendaFunko/Dockerfile
+
