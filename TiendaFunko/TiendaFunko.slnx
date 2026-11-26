@@ -2,5 +2,8 @@
   <Folder Name="/Solution Items/">
     <File Path="compose.yaml" />
   </Folder>
-  <Project Path="TiendaFunko/TiendaFunko.csproj" />
+  <Project Path="TiendaFunko.Api/TiendaFunko.Api.csproj" />
+  <Project Path="TiendaFunko.RazorPages/TiendaFunko.RazorPages.csproj" />
+  <Project Path="TiendaFunko.Shared/TiendaFunko.Shared.csproj" />
+  <Project Path="TiendaFunko.Test/TiendaFunko.Test.csproj" />
 </Solution>
