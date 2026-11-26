@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore.ValueGeneration;
 
 namespace TiendaFunko.Shared.IdGenerators;
 
+/// <summary>
+/// Genera los ID de 11 caracteres siguiendo el formato de YouTube (Base64url)
+/// </summary>
 public class YouTubeIdValueGenerator : ValueGenerator<string> {
     
     // caracteres válidos para base64url
