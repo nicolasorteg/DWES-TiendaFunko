@@ -6,12 +6,17 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <RootNamespace>TiendaFunko</RootNamespace>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\TiendaFunko.Shared\TiendaFunko.Shared.csproj" />
     </ItemGroup>
 
 </Project>
