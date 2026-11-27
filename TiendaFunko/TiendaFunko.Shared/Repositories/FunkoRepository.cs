@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using TiendaFunko.Shared.Entity;
 using TiendaFunko.Shared.Models;
 
@@ -13,6 +13,7 @@ public sealed class FunkosRepository(AppDbContext context) : IFunkosRepository
     public async Task<IReadOnlyList<Funko>> GetAllAsync() =>
         await context.Funkos
             .AsNoTracking()
+            .Include(f => f.Categoria)
             .Where(f => !f.IsDeleted)
             .OrderBy(f => f.Nombre)
             .ToListAsync();
@@ -27,7 +28,7 @@ public sealed class FunkosRepository(AppDbContext context) : IFunkosRepository
         await context.Funkos
             .AsNoTracking()
             .Include(f => f.Categoria)
-            .FirstOrDefaultAsync(f => f.Nombre == nombre && !f.IsDeleted);
+            .FirstOrDefaultAsync(f => f.Nombre.Trim() == nombre && !f.IsDeleted);
 
     public async Task<Funko> AddAsync(Funko entity)
     {
