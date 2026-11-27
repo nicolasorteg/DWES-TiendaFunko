@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using MongoDB.Bson;
 using TiendaFunko.Shared.Entity;
 using TiendaFunko.Shared.Models;
